@@ -29,6 +29,7 @@ def get_trim_string(string: str) -> str:
     """
     string = re.sub(
         r'\s+', '', string)
+
     return string
 
 
