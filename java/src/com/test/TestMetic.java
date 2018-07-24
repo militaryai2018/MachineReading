@@ -1,4 +1,4 @@
-package com.company;
+package com.test;
 
 import org.junit.jupiter.api.Test;
 
@@ -29,6 +29,25 @@ public class TestMetic {
         }
 
         System.out.println("Finish All Score!!!!!");
+    }
+
+    @Test
+    public void testMetric() {
+        File refFile = new File("src/data/my_ref.json");
+        File candFile = new File("src/data/my_cand.json");
+        ConcurrentHashMap<String, Double> scores = null;
+        try {
+            scores = Metric.getScore(refFile, candFile);
+        } catch (RuntimeException e) {
+            e.printStackTrace();
+            return;
+        }
+        if (scores != null) {
+            System.out.println("bleu score: " + scores.get(Metric.BLEU_SCORE));
+            System.out.println("rouge score: " + scores.get(Metric.ROUGE_SCORE));
+        }
+//        String str = Metric.processString("123445   ");
+//        System.out.println(str);
     }
 }
 
