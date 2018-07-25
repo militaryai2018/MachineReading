@@ -78,7 +78,7 @@ public class Metric {
                 jsonParser = jump(jsonParser, NEXT_TOKEN_STEP);
                 String candArticleID = jsonParser.getText();
                 if (!refArticleID.equals(candArticleID)) {
-                    throw new RuntimeException("article_id键值不吻合，请检查JSON文件");
+                    throw new RuntimeException("article_id不吻合，请检查JSON文件");
                 }
                 jsonParser = jump(jsonParser, NEXT_TOKEN_STEP);
                 if (!QUESTIONS.equals(jsonParser.getCurrentName())) {
