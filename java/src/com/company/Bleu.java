@@ -44,8 +44,8 @@ public class Bleu {
             return;
         }
         // 如果答卷答案为null初始化为""
-        if (candSent == null || candSent.equals("")) {
-            return;
+        if (candSent == null) {
+            candSent = "";
         }
 
         int refSentSize = refSent.length();
