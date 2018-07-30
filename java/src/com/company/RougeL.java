@@ -77,23 +77,26 @@ public class RougeL {
 //            System.out.println("reference: " + refSent);
             // 计算最大公共子序列表
             int lcs = getLCS(candSent, refSent);
-//            System.out.println("LCS: " + lcs);
-            // 计算准确率
-            double precs = lcs * 1.0 / candLength;
-//            System.out.println("P_LCS: " + lcs + " / " + candLength + " = " + precs);
-            // 计算召回率
-            double recall = lcs * 1.0 / refsLength;
-//            System.out.println("R_LCS: " + lcs + " / " + refsLength + " = " + recall);
 
-            // 计算RougeL分数
-            score = (1 + Math.pow(GAMMA, 2)) * recall * precs;
-//            System.out.println("score = (1 + GAMMA^2)R_lcs*P_lcs");
-//            System.out.println("score = (1 + " + GAMMA +"^2) * " + recall + " * " + precs);
-//            System.out.println("score = " + score);
-            score /= recall + Math.pow(GAMMA, 2) * precs;
-//            System.out.println("score /= R_lcs + GAMMA^2 * P_lcs");
-//            System.out.println("score /= " + recall + " " + GAMMA + "^2" + " * " + precs);
-//            System.out.println("score: " + score);
+            if (lcs != 0) {
+                    //            System.out.println("LCS: " + lcs);
+                // 计算准确率
+                double precs = lcs * 1.0 / candLength;
+//                System.out.println("P_LCS: " + lcs + " / " + candLength + " = " + precs);
+                // 计算召回率
+                double recall = lcs * 1.0 / refsLength;
+//                System.out.println("R_LCS: " + lcs + " / " + refsLength + " = " + recall);
+    
+                // 计算RougeL分数
+                score = (1 + Math.pow(GAMMA, 2)) * recall * precs;
+//                System.out.println("score = (1 + GAMMA^2)R_lcs*P_lcs");
+//                System.out.println("score = (1 + " + GAMMA +"^2) * " + recall + " * " + precs);
+//                System.out.println("score = " + score);
+                score /= recall + Math.pow(GAMMA, 2) * precs;
+//                System.out.println("score /= R_lcs + GAMMA^2 * P_lcs");
+//                System.out.println("score /= " + recall + " " + GAMMA + "^2" + " * " + precs);
+//                System.out.println("score: " + score);
+            }
         } else if (refsLength == 0) {
             return;
         }
