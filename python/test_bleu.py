@@ -35,7 +35,8 @@ def test_score():
     cand = "中华人民共和国"
     ref = "中华人民共和国公民"
     bleu = Bleu(N_SIZE)
-    s = bleu.score(cand, ref)
+    bleu.add_inst(cand, ref)
+    s = bleu.get_score()
     print('score: {}'.format(s))
 
 
@@ -43,5 +44,5 @@ if __name__ == '__main__':
     # test_count_bp()
     # test_count_bp2()
     # test_ngram()
-    # test_score()
-    test_add_inst()
+    test_score()
+    # test_add_inst()

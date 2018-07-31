@@ -20,7 +20,8 @@ def test_lcs2():
 def test_score():
     cand = '中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国'
     ref = '中华人民共和国的'
-    score = rouge.score(cand, ref)
+    rouge.add_inst(cand, ref)
+    score = rouge.get_score()
     print('score: {}'.format(score))
 
 
