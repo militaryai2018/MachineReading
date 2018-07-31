@@ -1,0 +1,61 @@
+[
+  {
+    "article_id": "13",
+    "questions": [
+      {
+        "questions_id": "1",
+        "answer": "中华人民共和国"
+      },
+      {
+        "questions_id": "2",
+        "answer": "23"
+      },
+      {
+        "questions_id": "3",
+        "answer": "我即是天龙"
+      },
+      {
+        "questions_id": "4",
+        "answer": "1999年02月."
+      },
+      {
+        "questions_id": "5",
+        "answer": "python是最好的语言"
+      }
+    ]
+  },
+  {
+    "article_id": "783",
+    "questions": [
+      {
+        "questions_id": "1",
+        "answer": "守望先锋、魔兽世界、炉石传说"
+      },
+      {
+        "questions_id": "2",
+        "answer": "我正在回来路上"
+      },
+      {
+        "questions_id": "3",
+        "answer": "百度一下，你就知道"
+      },
+      {
+        "questions_id": "4",
+        "answer": "中国疫苗制度具有问题"
+      }
+    ]
+  },
+  {
+    "article_id": "800",
+    "questions": [
+      {
+        "questions_id": "1",
+        "answer": "哥只是一个传说"
+      },
+      {
+        "questions_id": "2",
+        "answer": "A22"
+      }
+    ]
+  }
+]
