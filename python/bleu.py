@@ -60,6 +60,11 @@ class Bleu(object):
         Returns:
             bleu_score {float} -- bleu分数
         """
+        # if candidate ngram exist 0 return score zero
+        for key in self.candi_ngram:
+            if self.candi_ngram[key] == 0:
+                return 0
+
         prob_list = [
             self.match_ngram[n_size + 1] / float(self.candi_ngram[n_size + 1])
             for n_size in range(self.n_size)

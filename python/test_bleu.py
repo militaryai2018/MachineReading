@@ -32,8 +32,8 @@ def test_add_inst():
 
 
 def test_score():
-    cand = "中华人民共和国"
-    ref = "中华人民共和国公民"
+    cand = "中华"
+    ref = "中华人"
     bleu = Bleu(N_SIZE)
     bleu.add_inst(cand, ref)
     s = bleu.get_score()
